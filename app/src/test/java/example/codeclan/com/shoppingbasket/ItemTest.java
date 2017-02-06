@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-import static junit.framework.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -17,7 +16,7 @@ public class ItemTest {
 
     @Before
     public void setup() {
-        football = new Item("football", SpecialsEnum.NONE, 2);
+        football = new Item("football", true, 2);
     }
 
     @Test
@@ -32,7 +31,7 @@ public class ItemTest {
 
     @Test
     public void canGetItemSpecial() {
-        assertEquals(SpecialsEnum.NONE, football.getSpecial());
+        assertEquals(true, football.getBogof());
     }
 
     @Test
@@ -43,7 +42,7 @@ public class ItemTest {
 
     @Test
     public void canSetItemSpecial() {
-        football.setSpecial(SpecialsEnum.BOGOF);
-        assertEquals(SpecialsEnum.BOGOF, football.getSpecial());
+        football.setBogof(false);
+        assertEquals(false, football.getBogof());
     }
 }

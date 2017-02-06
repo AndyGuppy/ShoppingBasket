@@ -9,18 +9,13 @@ package example.codeclan.com.shoppingbasket;
 public class Item {
 
         private String name;
-        private SpecialsEnum special;
-        private int itemPrice;
+        private Boolean Bogof;
+        private double itemPrice;
 
-    // Preload some items
-        public static Item FireStick = new Item("Firestick", SpecialsEnum.NONE, 35);
-        public static Item Xbox = new Item("Xbox", SpecialsEnum.NONE, 20);
-        public static Item Melon = new Item("Melon", SpecialsEnum.BOGOF, 50);
-        public static Item Lime = new Item("Lime", SpecialsEnum.B3F2, 15);
 
-        public Item(String name, SpecialsEnum special, Integer itemPrice) {
+        public Item(String name, Boolean bogof, double itemPrice) {
             this.name = name;
-            this.special = special;
+            this.Bogof = bogof;
             this.itemPrice = itemPrice;
         }
 
@@ -29,22 +24,22 @@ public class Item {
         }
 
 
-        public int getItemPrice() {
+        public double getItemPrice() {
             return itemPrice;
         }
 
 
-        public SpecialsEnum getSpecial() {
-        return this.special;
+        public Boolean getBogof() {
+        return this.Bogof;
         }
 
-        public SpecialsEnum setSpecial(SpecialsEnum special) {
-            this.special = special;
-            return this.special;
+        public Boolean setBogof(Boolean bogof) {
+            this.Bogof = bogof;
+            return this.Bogof;
         }
 
-        public int setItemPrice(int itemPrice) {
+        public double setItemPrice(double itemPrice) {
             this.itemPrice = itemPrice;
-        return this.itemPrice;
+            return this.itemPrice;
     }
 }
